@@ -105,4 +105,14 @@ else
   @board[winner[0]]
 end
 end
+  def play
+until over?
+  turn
+end
+if won?
+  puts "Congratulations #{winner(board)}!"
+else
+  puts "Cat's Game!"
+end
+end
 end
