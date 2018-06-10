@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
 require 'pry'
 require_relative '../lib/tic_tac_toe.rb'
-myTicTacTocGame = TicTacToe.new
-myTicTacToeGame.play
+TicTacToe.new.play
