@@ -40,9 +40,9 @@ class TicTacToe
 end
    counter
 end
-def current_player(board)
+def current_player
 #if turn_count(board) %  == 0
-  num = turn_count(board)
+  num = turn_count(@board)
   if num % 2 == 0
     return "X"
   else
