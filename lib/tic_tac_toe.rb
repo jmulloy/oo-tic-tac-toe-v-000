@@ -102,7 +102,7 @@ winner = won?
 if won? == false
   nil
 else
-  board[winner[0]]
+  @board[winner[0]]
 end
 end
 end
