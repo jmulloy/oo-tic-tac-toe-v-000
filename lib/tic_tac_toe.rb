@@ -95,6 +95,6 @@ end
   end
 end
   def over?
-draw?|| won?(board)
+draw? || won?
 end
 end
