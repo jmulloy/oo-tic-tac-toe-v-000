@@ -61,4 +61,27 @@ end
     turn
   end
 end
+  def won?(board)
+x = "X";
+o = "O";
+
+WIN_COMBINATIONS.each do |win_combination|
+  win_index_1 = win_combination[0];
+  win_index_2 = win_combination[1];
+  win_index_3 = win_combination[2];
+
+  position_1 = board[win_index_1];
+  position_2 = board[win_index_2];
+  position_3 = board[win_index_3];
+
+  if ((position_1 == x && position_2 == x && position_3 == x) ||
+    (position_1 == o && position_2 == o && position_3 == o))
+      return win_combination;
+    else
+      false
+  end
+end
+#returning the WIN_COMBINATIONS array
+false; #explicitly tell ruby to return false if we've cycled through the board and no win combinations can be found
+end
 end
