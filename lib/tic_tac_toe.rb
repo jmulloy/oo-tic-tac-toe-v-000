@@ -36,7 +36,8 @@ class TicTacToe
   @board.each do |space|
     space == "X" || space == "O"
     counter += 1
-  counter
+  end
+   counter
 end
 end
 end
