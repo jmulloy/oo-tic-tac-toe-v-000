@@ -37,7 +37,7 @@ class TicTacToe
     if space == "X" || space == "O"
     counter += 1
   end
-   counter
 end
+   counter
 end
 end
