@@ -61,7 +61,7 @@ end
     turn
   end
 end
-  def won?(board)
+  def won?
 x = "X";
 o = "O";
 
