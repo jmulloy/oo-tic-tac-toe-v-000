@@ -94,7 +94,7 @@ end
     false
   end
 end
-def over?
+  def over?
 draw?|| won?(board)
 end
 end
