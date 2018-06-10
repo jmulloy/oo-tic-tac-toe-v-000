@@ -87,4 +87,11 @@ end
   def full?
 @board.all? {|position| position_taken?(@board.index(position))}
 end
+  def draw?
+  if !won?(@board) && full?(@board)
+    true
+  else
+    false
+  end
+end
 end
