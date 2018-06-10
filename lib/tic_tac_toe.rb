@@ -98,10 +98,10 @@ end
 draw? || won?
 end
   def winner
-winner = won?
-if won? == false
-  nil
-else
+    winner = won?
+    if won? == false
+      nil
+    else
   @board[winner[0]]
 end
 end
@@ -111,7 +111,8 @@ until over?
 end
 if won?
   puts "Congratulations #{winner}!"
-else
+  else
+    puts "Cat's Game!"
 end
 end
 end
