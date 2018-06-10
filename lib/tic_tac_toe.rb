@@ -62,31 +62,31 @@ end
   end
 end
   def won?
-x = "X";
-o = "O";
+    x = "X";
+    o = "O";
 
-WIN_COMBINATIONS.each do |win_combination|
-  win_index_1 = win_combination[0];
-  win_index_2 = win_combination[1];
-  win_index_3 = win_combination[2];
+    WIN_COMBINATIONS.each do |win_combination|
+      win_index_1 = win_combination[0];
+      win_index_2 = win_combination[1];
+      win_index_3 = win_combination[2];
 
-  position_1 = @board[win_index_1];
-  position_2 = @board[win_index_2];
-  position_3 = @board[win_index_3];
+      position_1 = @board[win_index_1];
+      position_2 = @board[win_index_2];
+      position_3 = @board[win_index_3];
 
-  if ((position_1 == x && position_2 == x && position_3 == x) ||
+      if ((position_1 == x && position_2 == x && position_3 == x) ||
     (position_1 == o && position_2 == o && position_3 == o))
       return win_combination;
     else
       false
+    end
   end
-end
 #returning the WIN_COMBINATIONS array
-false; #explicitly tell ruby to return false if we've cycled through the board and no win combinations can be found
+  false; #explicitly tell ruby to return false if we've cycled through the board and no win combinations can be found
 end
   def full?
-@board.all? {|position| position_taken?(@board.index(position))}
-end
+    @board.all? {|position| position_taken?(@board.index(position))}
+  end
   def draw?
   if !won? && full?
     true
@@ -95,15 +95,15 @@ end
   end
 end
   def over?
-draw? || won?
-end
+    draw? || won?
+  end
   def winner
     winner = won?
     if won? == false
       nil
     else
   @board[winner[0]]
-end
+  end
 end
   def play
 until over?
