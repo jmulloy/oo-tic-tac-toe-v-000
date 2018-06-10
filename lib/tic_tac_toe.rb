@@ -88,7 +88,7 @@ end
 @board.all? {|position| position_taken?(@board.index(position))}
 end
   def draw?
-  if !won?(@board) && full?(@board)
+  if !won? && full?
     true
   else
     false
