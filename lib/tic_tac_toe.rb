@@ -97,4 +97,12 @@ end
   def over?
 draw? || won?
 end
+  def winner
+winner = won?
+if won? == false
+  nil
+else
+  board[winner[0]]
+end
+end
 end
